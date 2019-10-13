@@ -3,18 +3,13 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
-	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="siema/siema.min.js"></script>
 	<title>About</title>
 	<style type="text/css">
 		html {
   			scroll-behavior: smooth;
 		}
-		#hobby h1{transition: 1s;}
-		#hobby h1:hover{
-			transition:0.4s;
-			opacity: 0.5;
-			padding: 5px;
-		}
+		#hobby h1{transition: 1s;padding: 1em}
 		/*#hobby{border-left:4px solid #007bff;}*/
 
 		#header h1{
@@ -22,14 +17,22 @@
 			max-width: 10px;
 			margin: 2rem;
 			color: black;
+			margin-bottom:2em; 
 		}
-		#header a button{
-			margin:-2rem;
+		/*btn*/
+		#start{
+			font-size: 2em;
+			margin-left: 3em;
+			border:none;
+			border-bottom: 1px solid grey;
+			background-color: white;
+			cursor: pointer;
 		}
+
 	</style>
 	<script type="text/javascript">
-		window.onload=()=>{
-			el=document.querySelector('#hobby');
+	window.onload=()=>{
+/*			let el=document.querySelector('#hobby');
 			if(window.screen.width<=500){
 				el.classList.remove('d-flex');
 				console.log(el)
@@ -38,25 +41,73 @@
 			}
 
 		console.log(window.screen.width)
+*/
+		siema=new Siema({
+			loop:true,
+			duration:1000
+		})
+
+		setInterval(()=>siema.next(),4000)
 	}
 	</script>
 </head>
 <body>
 
-<div id='header' style="height:25em">
+<div id='header'>
 	<h1>Virdio Samuel Saragih</h1>
-	<a href="#target"><button class="btn btn-primary m-5">Start!</button></a>
 </div>
 
 <div class="container" id='content'>
 
-	<div class="p-5 d-flex flex-row justify-content-center" id='hobby'>
-  		<div class="p-2"><h1>Ngoding</h1></div>
-  		<div class="p-2"><h1>Makan</h1></div>
-  		<div class="p-2"><h1>Tidur</h1></div>
+	<div class="siema p-5" id='hobby'>
+  		<div class="p-2" style="background-color: #ffeaa7" id='ngoding'><h1>Ngoding</h1></div>
+  		<div class="p-2" id='makan'><h1>Nasi Goreng</h1></div>
+  		<div class="p-2" style="background-color: #fbe9e7" id='tidur'><h1>Tidur</h1></div>
 	</div>
 </div>
 
+<style>
+	#hobby div#makan{
+		 animation-name: makananimate;
+		 animation-iteration-count: infinite;
+		 animation-duration: 1s;
+		 color:white;
+	}
+
+	@keyframes makananimate{
+		0%{background-color:#00b894;}
+		25%{background-color:#55efc4 }
+		50%{background-color: #ffe0b2}
+		75%{background-color: #fab1a0}
+		100%{background-color: #fd79a8}
+	}
+
+	#hobby div#ngoding h1{
+		 animation-name: ngodinganimate;
+		 animation-iteration-count: infinite;
+		 animation-duration: 1s;
+		 text-align: center;
+	}
+
+	@keyframes ngodinganimate{
+		0%{transform: scale(1);}
+		50%{transform: scale(0.5);}
+		100%{transform: scale(1);}
+	}
+
+	#hobby div#tidur h1{
+		 animation-name: tiduranimate;
+		 animation-iteration-count: infinite;
+		 animation-duration: 1s;
+		 text-align: center;
+	}
+
+	@keyframes tiduranimate{
+		0%{transform: translateY(10em);}
+		50%{transform: translateY(1em);}
+		100%{transform: translateY(-10em);}
+	}
+</style>
 <div id='target'>
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,128L48,112C96,96,192,64,288,74.7C384,85,480,139,576,154.7C672,171,768,149,864,128C960,107,1056,85,1152,69.3C1248,53,1344,43,1392,37.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
