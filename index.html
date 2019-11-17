@@ -103,7 +103,7 @@
 		}
 	}
 	function rotates(){
-		document.querySelector('body').style.animation='rotates 1s infinite';
+		document.querySelector('body').style.transform="rotate(180deg)"
 	}
 	</script>
 
@@ -137,10 +137,6 @@
 </div>
 
 <style>
-	@keyframes rotates{
-		from{transform: rotate(360deg)}
-		to{transform: scale(10);}
-	}
 	#header{margin: 5%}
 	@media (max-width: 700px){
 		#header{margin:0;}
