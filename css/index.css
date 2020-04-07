@@ -1,0 +1,136 @@
+* {
+  transition: 0.2s;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.grid-container {
+  margin: 10em auto;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 12em;
+  grid-template-areas: "header" "skills" "project" "footer";
+}
+
+.header {
+  grid-area: header;
+}
+.header .foto img {
+  width: 10em;
+  height: 10em;
+  object-fit: cover;
+  border-radius: 100px;
+}
+.header .contact {
+  margin: 2em;
+}
+.header .contact a {
+  cursor: pointer;
+  padding: 0.5em;
+  color: #333;
+  border-radius: 8px;
+  font-size: 2em;
+}
+.header .contact a:hover {
+  color: #0066ff;
+}
+
+.project {
+  grid-area: project;
+}
+
+.skills {
+  grid-area: skills;
+}
+
+.skills {
+  text-align: left;
+  margin-top: 1em;
+  margin-left: 25%;
+}
+.skills h1 {
+  font-size: 2em;
+}
+.skills h1:after {
+  content: "-------";
+  margin: 20px;
+  padding: 0.5em;
+}
+.skills ul li {
+  list-style-type: none;
+  padding: 3px;
+}
+
+.project {
+  text-align: right;
+  margin-top: 1em;
+  margin-right: 25%;
+}
+.project h1 {
+  font-size: 2em;
+}
+.project h1:before {
+  content: "-------";
+  margin: 20px;
+  padding: 0.5em;
+}
+.project ul li {
+  list-style-type: none;
+  padding: 3px;
+}
+
+.footer {
+  grid-area: footer;
+}
+.footer p {
+  line-height: 3px;
+}
+
+.navbar {
+  margin-left: -6px;
+  z-index: 1;
+  width: 100%;
+  top: -1px;
+  position: fixed;
+  background: white;
+  box-shadow: 0px 0px 5px #cccccc;
+}
+.navbar ul {
+  display: flex;
+  list-style-type: none;
+}
+.navbar ul li {
+  padding: 2em;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: black;
+}
+.navbar ul li#title {
+  font-family: Montserrat !important;
+  font-size: 2em;
+  flex: 1;
+  color: #333;
+  padding: 0.5em;
+}
+
+@media screen and (max-width: 700px) {
+  li[nav] {
+    display: none;
+  }
+
+  #title {
+    text-align: center;
+  }
+
+  .skills, .project {
+    margin-left: 15%;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

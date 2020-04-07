@@ -1,15 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="bootstrap.css">
-	<title>About</title>
+	<title>Virdio Samuel</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/aos/dist/aos.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="css/aos/dist/aos.js"></script>
 </head>
-<body>
+<body class="animated fadeIn">
 
-<div class="jumbotron">
-<h1>Hello</h1>
+<div class="navbar">
+	<ul>
+		<li id='title'><span><b>V.</b></span></li>
+		<li nav><a href="#about" onclick="window.scrollTo(0,0)">About</a></li>
+		<li nav><a href="#skills">Skills</a></li>
+		<li nav><a href="#project">Project</a></li>
+	</ul>
 </div>
 
-<h2>Virdio Samuel</h2>
+<div class="grid-container animated bounceInDown">
+  <div class="header">
+  	<div class="foto">
+  		<img src="img/avatar.jpg">
+  	</div>
+  	<div class="about" id="skills">
+  		<h1 style="font-family: Montserrat">Virdio Samuel S.</h1>
+  		<p>Hello!, My name is Virdio Samuel Saragih.<br> i'm 15, I studied in SMA Plus Logos. <br>I love HTML, CSS, JS, Node JS, PWA, and others</p>
+  		<p>hey you!, lets be friend!</p>
+  		<div class="contact">
+  			<a href="http://instagram.com/virdiosam" ig><i class="fa fa-instagram"></i></a>
+  			<a href="http://wa.me/6283876944538" wa><i class="fa fa-whatsapp"></i></a>
+  			<a href="http://facebook.com/virdio.samuel" fb><i class="fa fa-facebook-f"></i></a>
+  		</div>
+  	</div>
+  </div>
+  <div class="skills" data-aos='fade-right' style="margin-top: 5em" id="project">
+  	<h1>Skills</h1>
+  	<ul>
+  		<li>HTML</li>
+  		<li>CSS</li>
+  		<li>Javascript</li>
+  		<li>Node JS</li>
+  		<li>Vue</li>
+  		<li>Python</li>
+  		<li>PWA</li> 		
+  		<li>Meme</li>
+  	</ul>
+  </div>
+  <div class="project" data-aos='fade-left' >
+  	<h1>Project</h1>
+  	<ul>
+  		<li>CraftGreen</li>
+  		<li>Todolist App</li>
+  		<li>Vuepress Blog - <a href="http://diosamuel.netlify.com">Blog</a></li>
+  		<li>Pada belum jadi semua :v</li>
+  	</ul>
+  </div>
+  <div class="footer" data-aos='fade-up'>
+  	<h1>nice to meet u</h1>
+  	<h3 style="font-weight: normal;">made with <i class="fa fa-heart"></i> in Depok</h3>
+
+  </div>
+</div>
+<script src="js/index.js"></script>
+<script>window.onload=()=>AOS.init()</script>
 </body>
 </html>
