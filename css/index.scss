@@ -3,6 +3,7 @@
 	text-decoration:none;
 	font-family: 'Montserrat', sans-serif;
 }
+
 html{
 	scroll-behavior:smooth
 }
@@ -51,9 +52,8 @@ text-align:center;
 		font-size:2em;
 	}
 	h1:after{
-		content:"-------";
+		content:"///";
 		margin:20px;
-		padding:.5em
 	}
 	ul li{
 		list-style-type:none;
@@ -68,9 +68,8 @@ text-align:center;
 		font-size:2em;
 	}
 	h1:before{
-		content:"-------";
+		content:"\\\\\\";
 		margin:20px;
-		padding:.5em
 	}
 	ul li{
 		list-style-type:none;
@@ -86,7 +85,7 @@ text-align:center;
 }
 
 .navbar{
-	margin-left:-6px;
+	margin-left:-8px;
 	z-index:1;
 	width:100%;	
 	top:-1px;
@@ -118,9 +117,77 @@ text-align:center;
 
 li[nav]{display:none}
 #title{text-align:center}
+
 .skills,.project{
-	margin-left:15%
+	margin-left:15%;
+	font-size:13px
+}
+.header{
+	.about{
+		font-size:14px
+	}
+	.foto{
+		img{
+			width:8em;
+			height:8em
+		}
+	}
+}
+#title{
+	padding:.5em
+}
+
 }
 
 
+
+
+
+
+
+
+
+
+
+//dark and light theming
+li[nav] span[onclick]{cursor:pointer}
+.dark{
+	*{color:#ffff66}
+	background: #333;
+	.navbar{
+		box-shadow:0 0 3px #e6e600; 
+		background:#333;
+		li{
+			*{color:#e6e600}
+		}
+	}
+	.skills{ }
+	.project{
+		li a{
+		 border-bottom: 1px dotted #fafafa
+		}
+	}
+}
+
+.light{
+	*{color:black}
+	.project{
+		li a{
+		 border-bottom: 1px dotted black
+		}
+	}
+}
+
+
+
+
+//fucking not important
+[class='fa fa-heart']{
+ font-size:100px;
+ animation:kedapkedip 1s infinite
+}
+
+@keyframes kedapkedip{
+	0%{color:transparent;}
+	100%{color:red;}
 }

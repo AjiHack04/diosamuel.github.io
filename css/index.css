@@ -57,9 +57,8 @@ html {
   font-size: 2em;
 }
 .skills h1:after {
-  content: "-------";
+  content: "///";
   margin: 20px;
-  padding: 0.5em;
 }
 .skills ul li {
   list-style-type: none;
@@ -75,9 +74,8 @@ html {
   font-size: 2em;
 }
 .project h1:before {
-  content: "-------";
+  content: "\\\\\\";
   margin: 20px;
-  padding: 0.5em;
 }
 .project ul li {
   list-style-type: none;
@@ -92,7 +90,7 @@ html {
 }
 
 .navbar {
-  margin-left: -6px;
+  margin-left: -8px;
   z-index: 1;
   width: 100%;
   top: -1px;
@@ -130,6 +128,60 @@ html {
 
   .skills, .project {
     margin-left: 15%;
+    font-size: 13px;
+  }
+
+  .header .about {
+    font-size: 14px;
+  }
+  .header .foto img {
+    width: 8em;
+    height: 8em;
+  }
+
+  #title {
+    padding: 0.5em;
+  }
+}
+li[nav] span[onclick] {
+  cursor: pointer;
+}
+
+.dark {
+  background: #333;
+}
+.dark * {
+  color: #ffff66;
+}
+.dark .navbar {
+  box-shadow: 0 0 3px #e6e600;
+  background: #333;
+}
+.dark .navbar li * {
+  color: #e6e600;
+}
+.dark .project li a {
+  border-bottom: 1px dotted #fafafa;
+}
+
+.light * {
+  color: black;
+}
+.light .project li a {
+  border-bottom: 1px dotted black;
+}
+
+[class="fa fa-heart"] {
+  font-size: 100px;
+  animation: kedapkedip 1s infinite;
+}
+
+@keyframes kedapkedip {
+  0% {
+    color: transparent;
+  }
+  100% {
+    color: red;
   }
 }
 

@@ -10,11 +10,14 @@
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="css/aos/dist/aos.js"></script>
 </head>
-<body class="animated fadeIn">
+<body class="animated fadeIn" class="light">
 
 <div class="navbar">
 	<ul>
-		<li id='title'><span><b>V.</b></span></li>
+		<li id='title'>
+			<span onclick="theme('dark')" style="color: #333;cursor: pointer;" dark><b>V.</b></span>
+			<span onclick="theme('light')" style="display: none;cursor: pointer;" light><b>V.</b></span>
+		</li>
 		<li nav><a href="#about" onclick="window.scrollTo(0,0)">About</a></li>
 		<li nav><a href="#skills">Skills</a></li>
 		<li nav><a href="#project">Project</a></li>
@@ -55,12 +58,12 @@
   	<ul>
   		<li>CraftGreen</li>
   		<li>Todolist App</li>
-  		<li>Vuepress Blog - <a href="http://diosamuel.netlify.com">Blog</a></li>
+  		<li><a href="http://diosamuel.netlify.com">Vuepress Blog</a></li>
   		<li>Pada belum jadi semua :v</li>
   	</ul>
   </div>
   <div class="footer" data-aos='fade-up'>
-  	<h1>nice to meet u</h1>
+  	<h1>:)</h1>
   	<h3 style="font-weight: normal;">made with <i class="fa fa-heart"></i> in Depok</h3>
 
   </div>
